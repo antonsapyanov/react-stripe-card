@@ -1,0 +1,73 @@
+@import "mixins";
+
+// card
+
+%card-side {
+  @include border-radius(5px);
+  max-width: 365px;
+  max-height: 219px;
+  width: 100%;
+  height: 100%;
+  margin: 5px;
+  background: #eeeeee;
+  border-bottom: 1px solid grey;
+  border-right: 1px solid grey;
+}
+
+.stripe-card {
+  display: flex;
+  justify-content: center;
+}
+
+.stripe-card__front {
+  @extend %card-side;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.stripe-card__back {
+  @extend %card-side;
+}
+
+// elements
+
+.stripe-card__brand {
+  margin: 10px;
+}
+
+.stripe-card__number {
+  @include card-element;
+  margin: 10px;
+  width: 95%;
+}
+
+.stripe-card__expiry {
+  @include card-element;
+  margin: 10px;
+  width: 23%;
+}
+
+.stripe-card__line {
+  @include box-sizing(border-box);
+  height: 50px;
+  margin: 10px 0;
+  background-color: black;
+}
+
+.stripe-card__sign-field {
+  display: inline-block;
+  width: 50%;
+  height: 36.8px;
+  margin: 10px 0 10px 10px;
+  background-color: white;
+}
+
+.stripe-card__cvc {
+  @include card-element;
+  display: inline-block;
+  margin: 10px 10px 10px 0;
+  width: 15%;
+  background-color: white;
+}

@@ -1,0 +1,42 @@
+@import "mixins";
+
+%payment-icon {
+  width: 75px;
+  height: 45px;
+  background-size: contain;
+}
+
+#default {
+  @extend %payment-icon;
+  @include payment-icon-background(default);
+}
+
+#amex {
+  @extend %payment-icon;
+  @include payment-icon-background(amex);
+}
+
+#diners {
+  @extend %payment-icon;
+  @include payment-icon-background(diners);
+}
+
+#discover {
+  @extend %payment-icon;
+  @include payment-icon-background(discover);
+}
+
+#jcb {
+  @extend %payment-icon;
+  @include payment-icon-background(jcb);
+}
+
+#mastercard {
+  @extend %payment-icon;
+  @include payment-icon-background(mastercard);
+}
+
+#visa {
+  @extend %payment-icon;
+  @include payment-icon-background(visa);
+}
